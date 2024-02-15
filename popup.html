@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10vh;
+      }
+      .title {
+        font-size: 1.5rem;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 제목 입체 효과 추가 */
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        //border-radius: 0.5rem;
+        //box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* 입체 효과 추가 */
+      }
+      .btn {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* 버튼 입체 효과 추가 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">이메일을 보내시겠습니까?</h2>
+      <div class="button-container">
+        <button class="btn btn-primary" id="sendAll">전체발송</button>
+        <button class="btn btn-success" id="sendNew">신규발송</button>
+        <button class="btn btn-danger" id="cancel">취소</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("sendAll").addEventListener("click", function() {
+        google.script.run.sendEmailsAll();
+        google.script.host.close();
+      });
+
+      document.getElementById("sendNew").addEventListener("click", function() {
+        google.script.run.sendEmailsNew();
+        google.script.host.close();
+      });
+
+      document.getElementById("cancel").addEventListener("click", function() {
+        google.script.host.close();
+      });
+    </script>
+  </body>
+</html>
+</html>
