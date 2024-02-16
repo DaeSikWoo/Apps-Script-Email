@@ -8,7 +8,9 @@ There is a quota for the number of emails that can be sent depending on the Goog
 mailApp.gs consists of two functions : The first function sends all the information simultaneously, while the second function is triggered to send information whenever a new row is added.
 
 ### sendEmailsAll()
-[image](https://github.com/DaeSikWoo/Apps-Script-Email/assets/35883117/0de3be8d-ea84-4751-ac02-4745d6980bfb)
+
+![image](https://github.com/DaeSikWoo/Apps-Script-Email/assets/35883117/e7df57bb-df8c-4481-a921-9c47cf9f00fe)
+
 
 
  
